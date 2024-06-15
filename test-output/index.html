@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Girish Kulkarni\AppData\Local\Temp\testng-eclipse-2019051786\testng-customsuite.xml</span>
+                    <span>C:\Users\Girish Kulkarni\AppData\Local\Temp\testng-eclipse-481081785\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.rest.RequestParameters" class="method navigator-link" hash-for-method="downloadFileMultipartFromData">downloadFileMultipartFromData</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.rest.TestRest" class="method navigator-link" hash-for-method="extractResponse">extractResponse</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +122,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.rest.RequestParameters</span>
+              <span class="class-name">com.rest.TestRest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="downloadFileMultipartFromData">
-                  </a> <!-- downloadFileMultipartFromData -->
-                  <span class="method-name">downloadFileMultipartFromData</span>
+                  <a name="extractResponse">
+                  </a> <!-- extractResponse -->
+                  <span class="method-name">extractResponse</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Girish Kulkarni\AppData\Local\Temp\testng-eclipse-2019051786\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Girish Kulkarni\AppData\Local\Temp\testng-eclipse-481081785\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +146,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.rest.RequestParameters&quot;&gt;
+      &lt;class name=&quot;com.rest.TestRest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;downloadFileMultipartFromData&quot;/&gt;
+          &lt;include name=&quot;extractResponse&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.rest.RequestParameters --&gt;
+      &lt;/class&gt; &lt;!-- com.rest.TestRest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -192,9 +192,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'downloadFileMultipartFromData')
-data.setCell(0, 2, 'com.rest.RequestParameters')
-data.setCell(0, 3, 2223);
+data.setCell(0, 1, 'extractResponse')
+data.setCell(0, 2, 'com.rest.TestRest')
+data.setCell(0, 3, 2745);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -214,23 +214,37 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">13 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.rest.RequestParameters</span>
+              <span class="ignored-class-name">com.rest.TestRest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">multiPartFormData</span>
+                <span class="ignored-method-name">map_headers</span>
                 <br/>
-                <span class="ignored-method-name">multiQueryParameter</span>
+                <span class="ignored-method-name">multi_headers</span>
                 <br/>
-                <span class="ignored-method-name">singleQueryParameter</span>
+                <span class="ignored-method-name">testRest</span>
                 <br/>
-                <span class="ignored-method-name">multiValueParameter</span>
+                <span class="ignored-method-name">hamcrestAssertOnExtracedResponse</span>
                 <br/>
-                <span class="ignored-method-name">uploadFileMultipartFromData</span>
+                <span class="ignored-method-name">validateHamcrest</span>
                 <br/>
-                <span class="ignored-method-name">pathParameter</span>
+                <span class="ignored-method-name">headers</span>
+                <br/>
+                <span class="ignored-method-name">assertHeaders</span>
+                <br/>
+                <span class="ignored-method-name">logIfError</span>
+                <br/>
+                <span class="ignored-method-name">extractSingleValueFromResponse</span>
+                <br/>
+                <span class="ignored-method-name">bliackListHeaders</span>
+                <br/>
+                <span class="ignored-method-name">logIfErrorOnlyIfValidationFails</span>
+                <br/>
+                <span class="ignored-method-name">multivalue_headers</span>
+                <br/>
+                <span class="ignored-method-name">printHeader</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -242,9 +256,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.rest.RequestParameters</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.rest.TestRest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">downloadFileMultipartFromData</span>
+                <span class="method-name">extractResponse</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

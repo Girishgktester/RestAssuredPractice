@@ -19,11 +19,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestRest {
 	
+	String postManKey = "PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871";
+	
 	@Test
 	public void testRest() {
 		
 		given()
-		.baseUri("https://api.postman.com").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://api.postman.com").header("x-api-key",postManKey)
 		.when().get("/workspaces")
 		.then().log().all()
 		.assertThat().statusCode(200)
@@ -36,7 +38,7 @@ public class TestRest {
 	public void extractResponse() {
 		
 	Response res= given()
-		.baseUri("https://api.postman.com").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://api.postman.com").header("x-api-key",postManKey)
 		.when().get("/workspaces")
 		.then()
 		.assertThat().statusCode(200)
@@ -50,7 +52,7 @@ public class TestRest {
 	public void extractSingleValueFromResponse() {
 		
 	Response res= given()
-		.baseUri("https://api.postman.com").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://api.postman.com").header("x-api-key",postManKey)
 		.when().get("/workspaces")
 		.then()
 		.assertThat().statusCode(200)
@@ -72,7 +74,7 @@ public class TestRest {
 	@Test
 	public void hamcrestAssertOnExtracedResponse() {
 	Response name= given()
-		.baseUri("https://api.postman.com").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://api.postman.com").header("x-api-key",postManKey)
 		.when().get("/workspaces")
 		.then()
 		.assertThat().statusCode(200)
@@ -88,7 +90,7 @@ public class TestRest {
 	public void validateHamcrest() {
 		
 		given()
-		.baseUri("https://api.postman.com").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://api.postman.com").header("x-api-key",postManKey)
 		.when().get("/workspaces")
 		.then()
 		.assertThat().statusCode(200)
@@ -101,7 +103,7 @@ public class TestRest {
 	@Test
 	public void printHeader() {
 		given()
-		.baseUri("https://api.postman.com").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://api.postman.com").header("x-api-key",postManKey)
 		.log().headers()
 		.when().get("/workspaces")
 		.then()
@@ -114,7 +116,7 @@ public class TestRest {
 	@Test
 	public void logIfError() {
 		given()
-		.baseUri("https://api.postman.com").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://api.postman.com").header("x-api-key",postManKey)
 		.log().all()
 		.when().get("/workspaces")
 		.then()
@@ -126,7 +128,7 @@ public class TestRest {
 	@Test
 	public void logIfErrorOnlyIfValidationFails() {
 		given()
-		.baseUri("https://api.postman.com").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://api.postman.com").header("x-api-key",postManKey)
 		.config(config.logConfig(LogConfig.logConfig().enableLoggingOfRequestAndResponseIfValidationFails()))
 		//line number 112 will print response and request if validation fails
 //		.log().ifValidationFails() this will print the request 
@@ -142,7 +144,7 @@ public class TestRest {
 		set.add("x-api-key");
 		set.add("Accept");
 		given()
-		.baseUri("https://api.postman.com").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://api.postman.com").header("x-api-key",postManKey)
 		.config(config.logConfig(LogConfig.logConfig().blacklistHeader("x-api-key")))
 //		.config(config.logConfig(LogConfig.logConfig().blacklistHeaders(set))) blcklist multiple headers
 		.log().all()
@@ -156,7 +158,7 @@ public class TestRest {
 	public void headers() {
 		
 		given()
-		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key",postManKey)
 		.headers("header","value1")
 		.headers("x-mock-match-request-body","header")
 		.log().all()
@@ -173,7 +175,7 @@ public class TestRest {
 		Header matchHeader = new Header("x-mock-match-request-body", "header");
 		Headers multiheader = new Headers(header, matchHeader);
 		given()
-		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key",postManKey)
 		.headers(multiheader)
 		.log().all()
 		.when().get("/get")
@@ -190,7 +192,7 @@ public class TestRest {
 		headers.put("header", "value1");
 		headers.put("x-mock-match-request-body", "header");
 		given()
-		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key",postManKey)
 		.headers(headers)
 		.log().all()
 		.when().get("/get")
@@ -207,7 +209,7 @@ public class TestRest {
 		Header header2 = new Header("multivalueHeader", "value2");
 		Headers multiheader = new Headers(header1, header2);
 		given()
-		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key",postManKey)
 		.headers(multiheader)
 		.log().all()
 		.when().get("/get")
@@ -225,7 +227,7 @@ public class TestRest {
 		Headers multiheader = new Headers(header1, header2);
 		
 		Headers extractrHeaders = given()
-		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key","PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871")
+		.baseUri("https://55a45fde-4976-478f-b7d3-c86e453ce14d.mock.pstmn.io").header("x-api-key",postManKey)
 		.headers(multiheader)
 		.log().all()
 		.when().get("/get")
