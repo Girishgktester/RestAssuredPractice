@@ -17,12 +17,13 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 
 public class sendPayload {
-	
+	String postManKey = "";
+
 	 @BeforeClass
 	    public void beforeClass(){
 	        RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder().
 	                setBaseUri("https://api.postman.com").
-	                addHeader("x-api-key", "PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871").
+	                addHeader("x-api-key", postManKey).
 	                setContentType(ContentType.JSON).
 	                log(LogDetail.ALL);
 	        RestAssured.requestSpecification = requestSpecBuilder.build();

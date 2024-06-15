@@ -19,7 +19,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestRest {
 	
-	String postManKey = "PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871";
+	String postManKey = "";
 	
 	@Test
 	public void testRest() {
