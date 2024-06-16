@@ -1,0 +1,7 @@
+{
+    "workspace": {
+        "name": "sendWorkspaceAsPayloadFile",
+        "type": "team",
+        "description": "This workspace is created using Restassured and payload sent as file "
+    }
+}

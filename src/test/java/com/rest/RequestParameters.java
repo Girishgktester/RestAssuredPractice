@@ -11,7 +11,7 @@ import java.util.HashMap;
 import org.testng.annotations.Test;
 
 public class RequestParameters {
-	String postManKey = "";
+	String key = "";
 
 	@Test
 	public void singleQueryParameter() {

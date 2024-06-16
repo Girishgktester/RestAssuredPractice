@@ -17,7 +17,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 
 public class sendPayload {
-	String postManKey = "";
+	String postManKey = "PMAK-666b4119e710dd000159be39-11e5f039a5e3a8ef9e34601f045d7fa871";
 
 	 @BeforeClass
 	    public void beforeClass(){

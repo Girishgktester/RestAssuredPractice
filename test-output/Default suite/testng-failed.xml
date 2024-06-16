@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.rest.RequestParameters">
+      <class name="com.rest.JsonSchemaValidation">
         <methods>
-          <include name="uploadFileMultipartFromData"/>
+          <include name="testRest"/>
         </methods>
-      </class> <!-- com.rest.RequestParameters -->
+      </class> <!-- com.rest.JsonSchemaValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
