@@ -1,7 +1,6 @@
 package com.rest;
 
 import static io.restassured.RestAssured.given;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
@@ -59,6 +58,8 @@ public class Filters {
 		.assertThat()
 		.statusCode(200);
 	}
+	
+	
 	
 	@Test
 	public void logginFiltersToFileUsingGlobalConfig() throws FileNotFoundException {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Request method:	GET
 Request URI:	https://postman-echo.com/get
 Proxy:			<none>
@@ -35,3 +36,7 @@ set-cookie: sails.sid=s%3ARwNmIivD0dnBOgq8R8LTzpWLBqARok0S.LKqH7xujsrljpZXORD%2B
     },
     "url": "https://postman-echo.com/get"
 }
+=======
+Body:			<none>
+HTTP/1.1 200 OK
+>>>>>>> 4c387bf2e42b2b0ab91e9e471515479de97ffe58
