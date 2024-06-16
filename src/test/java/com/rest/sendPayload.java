@@ -54,7 +54,7 @@ public class sendPayload {
 	    public void sendPayLoadAsObject(){ 
 	 		HashMap<String, Object> mainObj = new HashMap<String, Object>();
 	 		HashMap<String, String> nestedObj = new HashMap<String, String>() ;
-	 		nestedObj.put("name", "sendWorkspaceAsObejct");
+	 		nestedObj.put("name", "sendWorkspaceAsObejctaa");
 	 		nestedObj.put("type", "team");
 	 		nestedObj.put("description", "This is where the collaboration happens.");
 	 		mainObj.put("workspace", nestedObj);
