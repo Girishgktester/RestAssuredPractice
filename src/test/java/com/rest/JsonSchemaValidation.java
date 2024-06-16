@@ -8,8 +8,7 @@ public class JsonSchemaValidation {
 	
 
 	@Test
-	public void testRest() {
-		
+	public void validateJsonSchema() {
 		given()
 		.baseUri("https://postman-echo.com")
 		.when().get("/get")
@@ -18,4 +17,5 @@ public class JsonSchemaValidation {
 		.body(matchesJsonSchemaInClasspath("jsonSchema.json"));
 	}
 
+	
 }
