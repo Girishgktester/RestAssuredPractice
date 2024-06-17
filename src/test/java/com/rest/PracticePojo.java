@@ -38,7 +38,6 @@ public class PracticePojo {
     public void simplePojoDeseralise1() throws JsonProcessingException{ 
 		Workspace workspace = new Workspace("Myworkspace4","Personal","This is created using pojo");
 		WorkspaceRoot workspaceroot = new WorkspaceRoot(workspace);
-	
 		WorkspaceRoot workroot = given()
         .body(workspaceroot)
         .when()
@@ -49,8 +48,5 @@ public class PracticePojo {
        .response()
        .as(WorkspaceRoot.class);
 		assertThat(workroot.getWorkspace().getName(),equalTo("Myworkspace4"));
-		
-
 	}
-
 }

@@ -1,38 +1,27 @@
-package com.rest.pojo.simple;
+package com.rest.pojo.collection;
 
-
-@lombok.Data
-public class Workspace {
+public class Info {
 	
-	
-	public Workspace() {
+	public Info() {
 		
 	}
-	
-	public Workspace(String name,String type,String descrption) {
+
+	public Info(String name, String descrption, String schema) {
 		this.name = name;
-		this.type = type;
 		this.descrption = descrption;
+		this.schema = schema;
 	}
-	
+
 	private String name;
-	private String type;
 	private String descrption;
-	
+	private String schema;
+
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public String getDescrption() {
@@ -43,5 +32,12 @@ public class Workspace {
 		this.descrption = descrption;
 	}
 
+	public String getSchema() {
+		return schema;
+	}
+
+	public void setSchema(String screma) {
+		this.schema = screma;
+	}
 
 }
