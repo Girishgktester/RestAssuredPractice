@@ -2,6 +2,7 @@ package com.rest.pojo.collection;
 
 import java.util.List;
 
+@lombok.Data
 public class Folder {
 
 	private String name;

@@ -6,7 +6,6 @@ public class Header {
 	private String value;
 
 	public Header() {
-
 	}
 
 	public Header(String key, String value) {
@@ -29,5 +28,4 @@ public class Header {
 	public void setValue(String value) {
 		this.value = value;
 	}
-
 }
